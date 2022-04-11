@@ -13,7 +13,7 @@ body {
   font-family: "Open sans", sans-serif; }
 
 .about {
-  padding: 8rem 0; }
+  padding: 12rem 0 8rem 0; }
   .about__heading {
     font-size: 3.4rem;
     text-transform: uppercase;
@@ -31,17 +31,113 @@ body {
       height: 0.4rem;
       background-color: #e64980; }
   .about__elements {
-    display: flex;
-    gap: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     margin-top: 10rem; }
   .about__photo {
-    width: 50rem; }
+    width: 90%; }
   .about__secondary {
     font-size: 2.6rem;
     margin-bottom: 2rem; }
   .about__paragraph {
     font-size: 1.5rem;
     margin-bottom: 4rem; }
+
+.contacts {
+  padding: 12rem 0 8rem 0; }
+  .contacts__heading {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    color: #e64980;
+    font-weight: 400;
+    text-align: center;
+    position: relative; }
+    .contacts__heading::after {
+      content: "";
+      display: block;
+      width: 10rem;
+      height: 0.4rem;
+      background-color: #e64980;
+      position: absolute;
+      top: 5rem;
+      left: 45%; }
+  .contacts__container {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 4rem;
+    margin-top: 6rem; }
+
+.newsletter__heading {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #e64980;
+  font-size: 2rem; }
+
+.newsletter__big {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  margin: 1.4rem 0; }
+
+.newsletter__location--text {
+  font-size: 1.5rem; }
+  .newsletter__location--text i {
+    color: #e64980;
+    margin-right: 0.4rem; }
+
+.newsletter__hours {
+  font-size: 1.5rem; }
+
+.newsletter__link {
+  color: #e64980;
+  font-size: 1.4rem;
+  transition: all 0.5s ease; }
+  .newsletter__link:hover {
+    text-decoration: none;
+    color: #c2255c;
+    transform: scale(1.11); }
+
+.newsletter__nav {
+  margin-top: 1.6rem; }
+
+.contact {
+  border-left: 1px solid #c2255c;
+  padding-left: 2rem; }
+  .contact__heading {
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem; }
+  .contact form label {
+    font-size: 1.6rem;
+    display: block; }
+  .contact__input {
+    border: none;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem; }
+    .contact__input:focus {
+      outline: none; }
+  .contact__btn {
+    border: none;
+    background-color: #e64980;
+    padding: 0.9rem 1.4rem;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 100px;
+    width: 50%;
+    margin-top: 4rem;
+    transition: all 0.5s ease; }
+    .contact__btn:hover {
+      transform: scale(1.11); }
+
+.form-group {
+  margin-top: 1.5rem; }
+
+.footer {
+  padding: 4rem 0; }
+  .footer__paragraph {
+    font-size: 1.6rem; }
 
 .header {
   background-image: linear-gradient(rgba(230, 73, 128, 0.8), rgba(214, 51, 108, 0.8)), url(../img/hero.png);
@@ -53,7 +149,8 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  padding: 0 9rem; }
   .navigation__photo {
     width: 10rem; }
   .navigation__list {
@@ -117,6 +214,65 @@ body {
       transform: scale(1.08);
       text-decoration: none; }
 
+.services {
+  padding: 12rem 0 8rem 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/service.png);
+  background-position: center;
+  background-size: cover; }
+  .services__heading {
+    font-size: 3.4rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    color: #e64980;
+    text-transform: uppercase;
+    position: relative; }
+    .services__heading::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 46%;
+      top: 5.4rem;
+      width: 10rem;
+      height: 0.4rem;
+      background-color: #e64980; }
+  .services__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 6rem; }
+
+.card {
+  margin-top: 5rem;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden; }
+  .card__img {
+    width: 100%; }
+  .card__information {
+    padding: 1rem; }
+  .card__title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: capitalize; }
+  .card__paragraph {
+    font-size: 1.6rem; }
+  .card__price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #c2255c; }
+  .card__btn {
+    background-color: #e64980;
+    border: none;
+    padding: 0.6rem 1.6rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 100px;
+    transition: all 0.5s ease; }
+    .card__btn:hover {
+      background-color: #d6336c;
+      transform: scale(1.04); }
+
 .btn-peace {
   background-color: #e64980;
   color: #fff;
@@ -130,3 +286,12 @@ body {
     color: #fff;
     transform: scale(1.08);
     text-decoration: none; }
+
+.sticky {
+  background-color: #c2255c;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 10; }

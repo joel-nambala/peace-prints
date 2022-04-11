@@ -1,5 +1,5 @@
 .about {
-  padding: 8rem 0;
+  padding: 12rem 0 8rem 0;
 
   &__heading {
     font-size: 3.4rem;
@@ -22,13 +22,15 @@
   }
 
   &__elements {
-    display: flex;
-    gap: 10rem;
+    // display: flex;
+    // gap: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     margin-top: 10rem;
   }
 
   &__photo {
-    width: 50rem;
+    width: 90%;
   }
 
   &__secondary {

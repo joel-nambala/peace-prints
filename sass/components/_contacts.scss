@@ -1,0 +1,123 @@
+.contacts {
+  padding: 12rem 0 8rem 0;
+
+  &__heading {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 10rem;
+      height: 0.4rem;
+      background-color: $primary-color;
+      position: absolute;
+      top: 5rem;
+      left: 45%;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 4rem;
+    margin-top: 6rem;
+  }
+}
+
+.newsletter {
+  &__heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $primary-color;
+    font-size: 2rem;
+  }
+
+  &__big {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    margin: 1.4rem 0;
+  }
+
+  &__location--text {
+    font-size: 1.5rem;
+
+    & i {
+      color: $primary-color;
+      margin-right: 0.4rem;
+    }
+  }
+
+  &__hours {
+    font-size: 1.5rem;
+  }
+
+  &__link {
+    color: $primary-color;
+    font-size: 1.4rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      text-decoration: none;
+      color: $tertiary-color;
+      transform: scale(1.11);
+    }
+  }
+
+  &__nav {
+    margin-top: 1.6rem;
+  }
+}
+
+.contact {
+  border-left: 1px solid $tertiary-color;
+  padding-left: 2rem;
+
+  &__heading {
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+  }
+
+  & form label {
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  &__input {
+    border: none;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: $primary-color;
+    padding: 0.9rem 1.4rem;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 100px;
+    width: 50%;
+    margin-top: 4rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.11);
+    }
+  }
+}
+
+.form-group {
+  margin-top: 1.5rem;
+}
