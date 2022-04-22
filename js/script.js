@@ -20,15 +20,15 @@ const navClose = document.querySelector('.side-nav__icon');
 const sideNav = document.querySelector('.side-nav');
 
 navToggle.addEventListener('click', function () {
-  sideNav.style.transform = `translateX(${0})`;
+  navBar.classList.add('side-nav');
 });
 
 navClose.addEventListener('click', function () {
-  sideNav.style.transform = `translateX(${-100}%)`;
+  navBar.classList.remove('side-nav');
 });
 
 navBar.addEventListener('click', function () {
-  sideNav.style.transform = `translateX(${-100}%)`;
+  navBar.classList.remove('side-nav');
 });
 
 ////////////////////////////////////////////////
@@ -42,4 +42,18 @@ window.addEventListener('scroll', function () {
 
   if (scrollHeight > navHeight) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
+});
+
+////////////////////////////////////////////////
+// FORM MODAL
+const modalBtn = document.querySelector('.navigation__btn');
+const modalForm = document.querySelector('.peace__form');
+const modalClose = document.querySelector('.peace__icon');
+
+modalBtn.addEventListener('click', function () {
+  modalForm.style.display = 'block';
+});
+
+modalClose.addEventListener('click', function () {
+  modalForm.style.display = 'none';
 });
