@@ -10,7 +10,8 @@ html {
 
 body {
   background-color: #f7f7f7;
-  font-family: "Open sans", sans-serif; }
+  font-family: "Open sans", sans-serif;
+  position: relative; }
 
 .about {
   padding: 12rem 0 8rem 0; }
@@ -228,8 +229,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  padding: 2rem 0;
-  position: relative; }
+  padding: 2rem 0; }
   @media only screen and (max-width: 480px) {
     .header {
       height: 80vh; } }
