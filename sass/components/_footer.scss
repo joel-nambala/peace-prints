@@ -1,7 +1,13 @@
 .footer {
-  padding: 4rem 0;
+  background-color: hsl(0, 0, 83%);
+  padding: 4rem 0 1rem 0;
 
-  &__paragraph {
-    font-size: 1.6rem;
+  &__copyright {
+    font-size: 1.8rem;
+    text-align: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
   }
 }

@@ -1,160 +1,94 @@
 .contacts {
-  padding: 12rem 0 8rem 0;
-
-  &__heading {
-    font-size: 3.4rem;
-    text-transform: uppercase;
-    color: $primary-color;
-    font-weight: 400;
-    text-align: center;
-    position: relative;
-
-    @media only screen and (max-width: $bp-navigation) {
-      font-size: 3.2rem;
-    }
-
-    @media only screen and (max-width: $bp-md) {
-      font-size: 2.8rem;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 10rem;
-      height: 0.4rem;
-      background-color: $primary-color;
-      position: absolute;
-      top: 5rem;
-      left: 45%;
-
-      @media only screen and (max-width: $bp-navigation) {
-        left: 43%;
-        width: 8rem;
-      }
-
-      @media only screen and (max-width: $bp-md) {
-        left: 40%;
-      }
-    }
-  }
-
-  &__container {
-    display: grid;
-    grid-template-columns: 40% 50%;
-    gap: 4rem;
-    margin-top: 6rem;
-
-    @media only screen and (max-width: $bp-navigation) {
-      display: block;
-    }
-  }
-}
-
-.newsletter {
-  &__heading {
-    text-transform: uppercase;
-    font-weight: 500;
-    color: $primary-color;
-    font-size: 2rem;
-  }
-
-  &__big {
-    font-size: 3.2rem;
-    text-transform: uppercase;
-    margin: 1.4rem 0;
-
-    @media only screen and (max-width: $bp-navigation) {
-      font-size: 2.8rem;
-    }
-  }
-
-  &__location--text {
-    font-size: 1.5rem;
-
-    & i {
-      color: $primary-color;
-      margin-right: 0.4rem;
-    }
-  }
-
-  &__hours {
-    font-size: 1.5rem;
-  }
-
-  &__link {
-    color: $primary-color;
-    font-size: 1.4rem;
-    transition: all 0.5s ease;
-
-    &:hover {
-      text-decoration: none;
-      color: $tertiary-color;
-      transform: scale(1.11);
-    }
-  }
-
-  &__nav {
-    margin-top: 1.6rem;
-  }
+  padding: 6rem 0 4rem 0;
 }
 
 .contact {
-  border-left: 1px solid $tertiary-color;
-  padding-left: 2rem;
+  width: 80%;
+  min-height: 30rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba(#fff, 0.8) 0%,
+      rgba(#fff, 0.8) 50%,
+      transparent 50%
+    ),
+    url(../img/contact.png);
+  margin: 0 auto;
+  padding: 2rem;
 
-  @media only screen and (max-width: $bp-navigation) {
+  @media only screen and (max-width: $bp-lg) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.8) 0%,
+        rgba(#fff, 0.8) 100%
+      ),
+      url(../img/contact.png);
+  }
+
+  @media only screen and (max-width: $bp-sm) {
     width: 100%;
   }
 
-  @media only screen and (max-width: $bp-navigation) {
-    margin-top: 4rem;
-  }
-
   &__heading {
-    font-size: 2.6rem;
-    text-transform: capitalize;
-    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
   }
 
-  & form label {
+  &__paragraph {
     font-size: 1.6rem;
-    display: block;
-  }
+    line-height: 1.6;
+    width: 48%;
+    margin-bottom: 2rem;
 
-  &__input {
-    border: none;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #ccc;
-    width: 50%;
-    padding: 0.6rem 1rem;
-    font-size: 1.4rem;
-
-    &:focus {
-      outline: none;
-    }
-
-    @media only screen and (max-width: $bp-md) {
+    @media only screen and (max-width: $bp-lg) {
       width: 100%;
     }
   }
 
-  &__btn {
-    border: none;
-    background-color: $primary-color;
-    padding: 0.9rem 1.4rem;
-    color: #fff;
-    font-size: 1.4rem;
-    border-radius: 100px;
-    width: 50%;
-    margin-top: 4rem;
-    transition: all 0.5s ease;
+  &__list {
+    list-style: none;
+  }
 
-    &:hover {
-      transform: scale(1.11);
-    }
+  &__item {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+  }
+
+  &__link {
+    color: $secondary-color;
+  }
+
+  &__secondary {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 3rem 0 2rem 0;
   }
 }
 
-.form-group {
-  margin-top: 1.5rem;
+.other {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link i {
+    color: $primary-color;
+    transition: all 0.4s ease;
+
+    &:hover i {
+      transform: scale(1.03);
+    }
+  }
 }

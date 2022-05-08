@@ -4,276 +4,267 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A design company that decorates your content. We value you our customer"
-    />
-    <title>Peace prints</title>
-    <link rel="shortcut icon" href="img/logo.png" type="image/png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/png" />
 
-    <!-- Bootstrap CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
-    />
-
-    <!-- Font awesome CDN -->
+    <!-- Font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
 
-    <!-- CSS source files -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS files -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/style.min.css" />
 
     <!-- JavaScript files -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    ></script>
     <script defer src="js/script.js"></script>
+    <title>Peace prints</title>
   </head>
   <body>
-    <header class="header" id="header">
+    <header id="header" class="header">
       <nav class="navigation">
-        <div class="navigation__logo">
-          <figure class="navigation__img">
-            <img src="/img/logo.png" alt="Logo" class="navigation__photo" />
-          </figure>
+        <div class="container">
+          <div class="navigation__content">
+            <img src="./img/logo.png" alt="Logo" class="navigation__logo" />
+            <i class="fa-solid fa-bars navigation__menu"></i>
+            <div class="links__container">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="#header" class="navigation__link scroll-link"
+                    >Home</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#about" class="navigation__link scroll-link"
+                    >About</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#services" class="navigation__link scroll-link"
+                    >Services</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#contacts" class="navigation__link scroll-link"
+                    >Contacts</a
+                  >
+                </li>
+                <button class="btn navigation__btn">Sign in</button>
+                <p>&nbsp;</p>
+              </ul>
+            </div>
+          </div>
         </div>
-        <i class="fa-solid fa-bars navigation__icon"></i>
-        <ul class="nav navigation__list">
-          <i class="fa-solid fa-xmark side-nav__icon"></i>
-          <li class="navigation__item nav-item">
-            <a href="#header" class="navigation__link nav-link">Home</a>
-          </li>
-          <li class="navigation__item nav-item">
-            <a href="#about" class="navigation__link nav-link">About</a>
-          </li>
-          <li class="navigation__item nav-item">
-            <a href="#services" class="navigation__link nav-link">Services</a>
-          </li>
-          <li class="navigation__item nav-item">
-            <a href="#contacts" class="navigation__link nav-link">Contact</a>
-          </li>
-          <button class="navigation__btn">Sign up</button>
-        </ul>
       </nav>
-
-      <div class="hero">
-        <h1 class="hero__heading">
-          <span class="hero__heading--main">Peace prints</span>
-          <span class="hero__heading--sub">Decorating your content</span>
-        </h1>
-        <a href="#about" class="hero__btn">Learn more &rarr;</a>
+      <div class="container">
+        <div class="hero">
+          <h1 class="hero__heading">
+            <span class="hero__main">peace prints</span>
+            <span class="hero__sub">decorating your content</span>
+          </h1>
+          <a href="#about" class="btn hero__btn scroll-link">learn more</a>
+        </div>
       </div>
     </header>
 
-    <section id="about" class="about container">
-      <h2 class="about__heading">About us</h2>
-      <div class="about__elements">
-        <figure class="about__image">
-          <img
-            src="/img/interior-design.png"
-            alt="peace prints"
-            class="about__photo"
-          />
-        </figure>
-        <aside class="about__content">
-          <h3 class="about__secondary">Designing for a positive future</h3>
-          <p class="about__paragraph">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Accusantium aliquam eligendi, quaerat ipsam autem ducimus
-            praesentium quidem aperiam dolorem quae. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Corporis cupiditate incidunt quis
-            suscipit praesentium explicabo soluta sequi repellat? Dolores cumque
-            repellat neque necessitatibus nihil ea iste facilis eius fugit
-            tempore.
-          </p>
-          <a href="#contacts" class="btn-peace">Contact us</a>
-        </aside>
-      </div>
-    </section>
-    <section id="services" class="services">
+    <section id="about" class="about">
       <div class="container">
-        <h2 class="services__heading">Services</h2>
-        <div class="services__container">
-          <div class="card">
-            <figure class="card__photo">
-              <img src="img/hero.png" alt="screen printing" class="card__img" />
-            </figure>
-            <div class="card__information">
-              <h3 class="card__title">Screen printing</h3>
-              <p class="card__paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                ex repellat optio similique dolorem quos.
-              </p>
-              <p class="card__price">Kshs 2500</p>
-              <button class="card__btn">Read more</button>
-            </div>
-          </div>
-          <div class="card">
-            <figure class="card__photo">
-              <img src="img/hero.png" alt="screen printing" class="card__img" />
-            </figure>
-            <div class="card__information">
-              <h3 class="card__title">Embroidery</h3>
-              <p class="card__paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                ex repellat optio similique dolorem quos.
-              </p>
-              <p class="card__price">Kshs 3650</p>
-              <button class="card__btn">Read more</button>
-            </div>
-          </div>
-          <div class="card">
-            <figure class="card__photo">
-              <img src="img/hero.png" alt="screen printing" class="card__img" />
-            </figure>
-            <div class="card__information">
-              <h3 class="card__title">Sublimation</h3>
-              <p class="card__paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                ex repellat optio similique dolorem quos.
-              </p>
-              <p class="card__price">Kshs 4400</p>
-              <button class="card__btn">Read more</button>
-            </div>
-          </div>
-          <div class="card">
-            <figure class="card__photo">
-              <img src="img/hero.png" alt="screen printing" class="card__img" />
-            </figure>
-            <div class="card__information">
-              <h3 class="card__title">Branding</h3>
-              <p class="card__paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                ex repellat optio similique dolorem quos.
-              </p>
-              <p class="card__price">Kshs 1600</p>
-              <button class="card__btn">Read more</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="grid-2">
+          <div class="about__content">
+            <h2 class="about__heading">Designing a positive future</h2>
+            <p class="about__paragraph">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
+              ducimus earum repudiandae consequatur quo, dignissimos adipisci
+              sequi cupiditate vero animi! Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Adipisci quo esse harum at est
+              corporis, accusantium doloremque nulla ducimus veniam!
+            </p>
+            <a href="#contacts" class="btn about__btn scroll-link"
+              >contact us</a
+            >
 
-    <section id="contacts" class="contacts">
-      <div class="container">
-        <h2 class="contacts__heading">Contact us</h2>
-        <div class="contacts__container">
-          <div class="newsletter">
-            <h3 class="newsletter__heading">Join our newsletter</h3>
-            <h3 class="newsletter__big">
-              Daily newsletter for our products and services
-            </h3>
-            <div class="newsletter__location">
-              <p class="newsletter__location--text">
-                <i class="fa-solid fa-location-dot"></i>
-                Revolution House, Terry street. Nairobi
-              </p>
-              <div class="newsletter__open">
-                <p class="newsletter__hours">
-                  Monday to Friday - 8:00am to 6:00pm
-                </p>
-                <p class="newsletter__hours">Saturday - 8:00am to 4:00pm</p>
-              </div>
-              <a href="#" class="newsletter__link">peaceprints@gmail.com</a>
-              <ul class="nav newsletter__nav">
-                <li class="nav-item newsletter__item">
-                  <a href="#" class="nav-link newsletter__link"
-                    ><i class="fa-brands fa-facebook-f"></i
-                  ></a>
+            <div class="box">
+              <h3 class="box__heading">Core values</h3>
+              <ul class="box__list">
+                <li class="box__item">
+                  <i class="fa-solid fa-check box__icon"></i>Design
                 </li>
-                <li class="list-item newsletter__item">
-                  <a href="#" class="nav-link newsletter__link">
-                    <i class="fa-brands fa-twitter"></i>
-                  </a>
+                <li class="box__item">
+                  <i class="fa-solid fa-check box__icon"></i>Print
                 </li>
-                <li class="list-item newsletter__item">
-                  <a href="#" class="nav-link newsletter__link">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
+                <li class="box__item">
+                  <i class="fa-solid fa-check box__icon"></i>Brand
                 </li>
               </ul>
             </div>
           </div>
-          <div class="contact">
-            <h3 class="contact__heading">Contact us</h3>
-            <form>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  class="contact__input"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  class="contact__input"
-                  id="email"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  name="message"
-                  class="contact__input"
-                  id="message"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="contact__btn">Submit</button>
-            </form>
+          <img
+            src="./img/interior-design.png"
+            alt="interior design"
+            class="about__image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="bg-video">
+        <video class="bg-video__content" autoplay loop muted>
+          <source src="./img/video.mp4" type="video/mp4" />
+          <source src="./img/video.webm" type="video/webm" />
+          Your browser is not supported!
+        </video>
+      </div>
+      <div class="services__content">
+        <div class="container">
+          <h2 class="services__heading">we offer the following services</h2>
+          <div class="grid">
+            <div class="card">
+              <h3 class="card__title">Screen printing</h3>
+              <p class="card__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+                perferendis eos sequi consequuntur voluptatem iste cum
+                voluptates officiis iusto vero mollitia dicta incidunt, nisi
+                esse.
+              </p>
+              <p class="card__price">Kshs 2500</p>
+              <a href="#" class="card__btn">Read more</a>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">Embroidery</h3>
+              <p class="card__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+                perferendis eos sequi consequuntur voluptatem iste cum
+                voluptates officiis iusto vero mollitia dicta incidunt, nisi
+                esse.
+              </p>
+              <p class="card__price">Kshs 3000</p>
+              <a href="#" class="card__btn">Read more</a>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">Sublimation</h3>
+              <p class="card__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+                perferendis eos sequi consequuntur voluptatem iste cum
+                voluptates officiis iusto vero mollitia dicta incidunt, nisi
+                esse.
+              </p>
+              <p class="card__price">Kshs 1500</p>
+              <a href="#" class="card__btn">Read more</a>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">Branding</h3>
+              <p class="card__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+                perferendis eos sequi consequuntur voluptatem iste cum
+                voluptates officiis iusto vero mollitia dicta incidunt, nisi
+                esse.
+              </p>
+              <p class="card__price">Kshs 3500</p>
+              <a href="#" class="card__btn">Read more</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <footer class="bg-dark text-white footer">
-      <div class="footer__copyright">
-        <p class="footer__paragraph text-center">
-          Copyright &copy;, <span class="copyright-year"></span> Peace Prints
+
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <div class="contact">
+          <h2 class="contact__heading">contact us for more information</h2>
+          <p class="contact__paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            perspiciatis aliquid, ipsum a quisquam omnis facilis deserunt
+            reiciendis dignissimos. Dolores?
+          </p>
+          <ul class="contact__list">
+            <li class="contact__item">
+              Revolution house, Terry street 26 Nairobi
+            </li>
+            <li class="contact__item">
+              <a href="mailto:peaceprints@gmail.com" class="contact__link"
+                >peaceprints@gmail.com</a
+              >
+            </li>
+          </ul>
+
+          <h3 class="contact__secondary">Other links</h3>
+          <ul class="other__list">
+            <li class="other__item">
+              <a href="tel:+254759381654" class="other__link"
+                ><i class="fa-solid fa-phone"></i
+              ></a>
+            </li>
+            <li class="other__item">
+              <a href="tel:+254759381654" class="other__link"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </li>
+            <li class="other__item">
+              <a href="tel:+254759381654" class="other__link"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li class="other__item">
+              <a href="tel:+254759381654" class="other__link"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="popup remove-popup">
+      <div class="popup__content">
+        <h2 class="popup__heading">Sign up and access services</h2>
+        <i class="fa-solid fa-xmark popup__close"></i>
+        <form class="popup__form">
+          <div class="form-group">
+            <label for="first-name">First name:</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <button type="submit" class="btn popup__btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <a href="#header" class="scroll-link"
+      ><i class="fa-solid fa-arrow-up arrow__up"></i
+    ></a>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copyright">
+          Copyright Peace prints &copy; <span class="copyright-year"></span>
         </p>
-        <p class="footer__paragraph text-center">All rights reserved</p>
+        <p class="footer__copyright">All rights reserved</p>
       </div>
     </footer>
-
-    <form class="peace__form">
-      <i class="fa-solid fa-xmark peace__icon"></i>
-      <div class="form-group">
-        <label for="full-name">Full Names:</label>
-        <input
-          type="text"
-          name="full-name"
-          id="full-name"
-          placeholder="Enter your name"
-          required
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-        />
-      </div>
-      <button class="peace__button">Submit</button>
-    </form>
   </body>
 </html>

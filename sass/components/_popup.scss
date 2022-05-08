@@ -1,0 +1,77 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(7px) brightness(70%);
+  height: 100vh;
+  width: 100%;
+  z-index: 109;
+  transition: all 0.8s ease;
+
+  &__content {
+    width: 70%;
+    background-color: rgba($color-white, 0.8);
+    border-radius: 6px;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: $bp-xs) {
+      width: 90%;
+    }
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: $secondary-color;
+
+    @media only screen and (max-width: 400px) {
+      font-size: 2rem;
+      width: 80%;
+    }
+  }
+
+  &__btn {
+    margin-top: 3rem;
+  }
+
+  &__close {
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.popup label {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.popup input {
+  border: none;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  padding: 0.6rem 1.2rem;
+  width: 50%;
+
+  @media only screen and (max-width: $bp-nav) {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

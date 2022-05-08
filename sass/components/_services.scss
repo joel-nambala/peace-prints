@@ -1,98 +1,58 @@
 .services {
-  padding: 12rem 0 8rem 0;
-  background-image: linear-gradient(rgba(#fff, 0.7), rgba(#fff, 0.7)),
-    url(../img/service.png);
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  padding: 6rem 0 2rem 0;
 
   &__heading {
-    font-size: 3.4rem;
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    color: $primary-color;
     text-transform: uppercase;
-    position: relative;
-
-    @media only screen and (max-width: $bp-navigation) {
-      font-size: 3.2rem;
-    }
-
-    @media only screen and (max-width: $bp-md) {
-      font-size: 2.8rem;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 46%;
-      top: 5.4rem;
-      width: 10rem;
-      height: 0.4rem;
-      background-color: $primary-color;
-
-      @media only screen and (max-width: $bp-navigation) {
-        left: 43%;
-        width: 8rem;
-      }
-
-      @media only screen and (max-width: $bp-md) {
-        left: 40%;
-      }
-    }
-  }
-
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    gap: 6rem;
+    text-align: center;
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+    color: $tertiary-color;
   }
 }
 
 .card {
-  margin-top: 5rem;
-  background: #fff;
-  border-radius: 5px;
-  overflow: hidden;
-
-  &__img {
-    width: 100%;
-  }
-
-  &__information {
-    padding: 1rem;
-  }
+  background-color: rgba(#fff, 0.6);
+  padding: 2rem;
+  border-radius: 4px;
+  cursor: default;
+  transition: all 0.5s ease;
 
   &__title {
-    font-size: 2.2rem;
-    font-weight: 400;
-    text-transform: capitalize;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3rem;
   }
 
   &__paragraph {
     font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   &__price {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: $tertiary-color;
+    font-size: 2rem;
+    margin-bottom: 3rem;
   }
 
   &__btn {
-    background-color: $primary-color;
-    border: none;
-    padding: 0.6rem 1.6rem;
-    margin-bottom: 2rem;
-    color: #fff;
-    font-size: 1.5rem;
-    border-radius: 100px;
-    transition: all 0.5s ease;
+    font-size: 1.6rem;
+    color: #444;
+    border: 2px solid $secondary-color;
+    padding: 0.8rem 1.8rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    transition: all 0.4s ease;
 
     &:hover {
       background-color: $secondary-color;
-      transform: scale(1.04);
+      color: #fff;
     }
+  }
+
+  &:hover {
+    transform: translateY(-1rem) scale(1.04);
   }
 }

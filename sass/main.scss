@@ -1,11 +1,12 @@
+@import "abstract/utilities";
+@import "abstract/variables";
+
 @import "base/base";
-@import "base/variables";
 
 @import "components/about";
+@import "components/bg-video";
 @import "components/contacts";
 @import "components/footer";
-@import "components/form";
 @import "components/header";
+@import "components/popup";
 @import "components/services";
-
-@import "utilities/utilities";

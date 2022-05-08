@@ -1,21 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  box-shadow: inherit;
+  box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 
-  // @media only screen and (max-width: $bp-md) {
-  //   font-size: 50%;
-  // }
+  @media only screen and (max-width: $bp-xs) {
+    font-size: 56%;
+  }
 }
 
 body {
-  background-color: #f7f7f7;
-  font-family: "Open sans", sans-serif;
-  position: relative;
+  background-color: $default-color;
+  font-family: "Lato", sans-serif;
 }

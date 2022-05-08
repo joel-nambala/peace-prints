@@ -12,48 +12,98 @@ const setCopyrightYear = function () {
 
 setCopyrightYear();
 
-//////////////////////////////////////
-// SIDE NAV
-const navToggle = document.querySelector('.navigation__icon');
-const navBar = document.querySelector('.navigation__list');
-const navClose = document.querySelector('.side-nav__icon');
-const sideNav = document.querySelector('.side-nav');
-
-navToggle.addEventListener('click', function () {
-  navBar.classList.add('side-nav');
-});
-
-navClose.addEventListener('click', function () {
-  navBar.classList.remove('side-nav');
-});
-
-navBar.addEventListener('click', function () {
-  navBar.classList.remove('side-nav');
-});
-
-////////////////////////////////////////////////
+///////////////////////////////
 // FIXED NAVIGATION BAR
+const navigation = document.querySelector('.navigation');
+const arrowUp = document.querySelector('.arrow__up');
 const header = document.querySelector('.header');
-const nav = document.querySelector('.navigation');
 
-window.addEventListener('scroll', function () {
-  const scrollHeight = this.window.scrollY;
-  const navHeight = nav.getBoundingClientRect().height;
+const fixedNavigation = function () {
+  // 1. Calculate the heights
+  const scrollHeight = window.scrollY;
+  const navHeight = navigation.getBoundingClientRect().height;
+  const headerHeight = header.getBoundingClientRect().height;
 
-  if (scrollHeight > navHeight) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
+  // 2. Check if the scroll height is greator than nav height
+  if (scrollHeight > navHeight) navigation.classList.add('sticky');
+  else navigation.classList.remove('sticky');
+
+  // 3. Show and hide back to top button
+  if (scrollHeight > headerHeight - navHeight) arrowUp.style.display = 'block';
+  else arrowUp.style.display = 'none';
+};
+
+window.addEventListener('scroll', fixedNavigation);
+
+/////////////////////////////////////////////////
+// RESPONSIVE NAVIGATION
+const navToggle = document.querySelector('.navigation__menu');
+const linksContainer = document.querySelector('.links__container');
+const navList = document.querySelector('.navigation__list');
+
+const toggleNav = function () {
+  // 1. Calculate the heights
+  const containerHeight = linksContainer.getBoundingClientRect().height;
+  const navHeight = navList.getBoundingClientRect().height;
+
+  // 2. Add the height to the links container
+  if (containerHeight === 0) linksContainer.style.height = `${navHeight}px`;
+  else linksContainer.style.height = 0;
+};
+
+navToggle.addEventListener('click', toggleNav);
+
+///////////////////////////////////////////////////////////
+// SMOOTH SCROLL
+const scrollLink = document.querySelectorAll('.scroll-link');
+
+// Loop over the node list
+scrollLink.forEach(function (link, i) {
+  // Add an event listener to the links
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    // 1. Get the target element
+    const id = e.currentTarget.getAttribute('href').slice(1);
+    const element = document.getElementById(id);
+
+    // Calculate the heights
+    const navHeight = navigation.getBoundingClientRect().height;
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    const fixedNav = navigation.classList.contains('sticky');
+
+    // Calculate the current position of the scroll
+    let position = element.offsetTop - navHeight;
+
+    if (!fixedNav) position = position - navHeight;
+    if (navHeight > 82) position = position + containerHeight;
+
+    // Add the scroll method with the scroll method
+    window.scroll({
+      left: 0,
+      top: position,
+    });
+
+    // Remove the height from the links container
+    linksContainer.style.height = 0;
+  });
 });
 
-////////////////////////////////////////////////
-// FORM MODAL
-const modalBtn = document.querySelector('.navigation__btn');
-const modalForm = document.querySelector('.peace__form');
-const modalClose = document.querySelector('.peace__icon');
+//////////////////////////////////////////////
+// POPUP FUNCTIONALITY
+const popup = document.querySelector('.popup');
+const openPopup = document.querySelector('.navigation__btn');
+const closePopup = document.querySelector('.popup__close');
 
-modalBtn.addEventListener('click', function () {
-  modalForm.style.display = 'block';
-});
+const openModal = function () {
+  popup.classList.remove('remove-popup');
+  linksContainer.style.height = 0;
+};
 
-modalClose.addEventListener('click', function () {
-  modalForm.style.display = 'none';
-});
+const closeModal = function () {
+  popup.classList.add('remove-popup');
+};
+
+openPopup.addEventListener('click', openModal);
+closePopup.addEventListener('click', closeModal);
+
+document.addEventListener('blur', closeModal);
