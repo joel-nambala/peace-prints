@@ -105,5 +105,3 @@ const closeModal = function () {
 
 openPopup.addEventListener('click', openModal);
 closePopup.addEventListener('click', closeModal);
-
-document.addEventListener('blur', closeModal);
